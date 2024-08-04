@@ -18,25 +18,17 @@
 
 body {
 
-  color: black;
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-  min-height: 100vh;
-  /* background: linear-gradient(
-      rgba(0, 0, 0, 0.7),
-      rgba(0, 0, 0, 0.7) 
-    ),
-    url('../public/images/background.png') no-repeat center center;
-  background-size: cover; */
-  background-color: aliceblue;
+  color:white;
+  background-color: black;
+  height:100vh
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.nav-link {
+  @apply hover:text-green-300 hover:underline underline-offset-4
 }
