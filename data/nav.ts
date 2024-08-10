@@ -1,7 +1,7 @@
 export const nav = [
     {
         title: "Home",
-        url: ""
+        url: "/"
     },
     {
         title: "About",
@@ -17,6 +17,6 @@ export const nav = [
     },
     {
         title: "Contact",
-        url: ""
+        url: "/contact"
     }
 ]

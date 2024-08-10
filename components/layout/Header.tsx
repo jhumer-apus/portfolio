@@ -1,18 +1,15 @@
-import { nav } from "@/data/nav";
-import Link from "next/link";
+"use client"
+
+import { usePathname } from "next/navigation";
+import ServerNavigation from "./ServerNavigation";
 
 export default function Header(){
 
+    const currentPath = usePathname()
     return (
         <div className="hidden md:block">
             <div className="bg-zinc-600 bg-opacity-40 py-8 flex justify-end px-12">
-                <nav className="">
-                    <ul className="flex gap-8">
-                        {nav.map(link => (
-                            <li><Link href={link.url} className="nav-link">{link.title}</Link></li>
-                        ))}
-                    </ul>
-                </nav>
+                <ServerNavigation currentPath={currentPath}/>
             </div>
         </div>
     )

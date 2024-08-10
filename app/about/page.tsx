@@ -1,15 +1,11 @@
-import History from "@/components/History";
+import Introduction from "@/components/about/Introduction";
+import WorkHistory from "@/components/about/WorkHistory";
 
 export default function About() {
     return (
         <div>
-            <div className="w-fit m-auto">
-                <History 
-                    direction="vertical"
-                    size={20} 
-                    content={[]} 
-                />
-            </div>
+            <Introduction />
+            <WorkHistory />
             
         </div>
     )

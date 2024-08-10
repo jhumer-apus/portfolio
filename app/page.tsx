@@ -33,8 +33,8 @@ export default function Home() {
 
             <nav className="mt-16 m-auto md:ml-0 w-fit">
               <ul className="flex flex-col md:flex-row gap-8">
-                {nav.map(link => (
-                  <li><Link href={link.url} className="text-slate-300 hover:text-green-300 border border-white hover:border-green-300 rounded-md p-2"><span>{link.title}  </span>{link.icon}</Link></li>
+                {nav.map((link, index:number) => (
+                  <li key={index}><Link href={link.url} className="text-slate-300 hover:text-green-300 border border-white hover:border-green-300 rounded-md p-2"><span>{link.title}  </span>{link.icon}</Link></li>
                 ))}
               </ul>
             </nav>
