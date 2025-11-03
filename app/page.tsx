@@ -1,19 +1,19 @@
-import Particles from "@/components/Particles";
+import About from "@/components/contents/About";
+import Home from "@/components/contents/Home";
+import ParticlesBackground from "@/components/animation/ParticlesBackground";
+import Portfolio from "@/components/contents/Portfolio";
+import Contact from "@/components/contents/Contact";
 
 export default function Main() {
   return (
-    <div className="h-screen relative overflow-auto">
-      <Particles
-        particleColors={['#ffffff', '#ffffff']}
-        particleCount={200}
-        particleSpread={10}
-        speed={0.7}
-        particleBaseSize={150}
-        moveParticlesOnHover={false}
-        alphaParticles={false}
-        disableRotation={true}
-        className="absolute w-full h-full"
-      />
+    <div className="relative h-screen overflow-auto">
+      <ParticlesBackground />
+      <main>
+        <Home />
+        <About />
+        <Portfolio />
+        <Contact />
+      </main>
     </div>
   );
 }

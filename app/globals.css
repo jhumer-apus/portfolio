@@ -3,9 +3,17 @@
 
 @custom-variant dark (&:is(.dark *));
 
+html {
+  scroll-behavior: smooth;
+}
 body {
   background: black;
   color: white;
+}
+
+/* globals.css or any global CSS file */
+::-webkit-scrollbar {
+  width: 0px; /* width of the scrollbar */
 }
 
 @theme inline {
