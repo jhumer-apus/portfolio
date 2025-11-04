@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { FaCertificate, FaCode } from "react-icons/fa";
 import { FaScrewdriverWrench } from "react-icons/fa6";
 import FadeContent from "../animation/FadeContent";
+import Projects from "./portfolio/Projects";
 
 export default function Portfolio() {
 
@@ -15,17 +16,20 @@ export default function Portfolio() {
         {
             label: "Projects",
             key: "projects",
-            icon: <FaCode  className="size-6"/>
+            icon: <FaCode  className="size-6"/>,
+            content: <Projects />
         },
         {
             label: "Certificates",
             key: "certificates",
-            icon: <FaCertificate className="size-6"/>
+            icon: <FaCertificate className="size-6"/>,
+            content: ""
         },
         {
             label: "Tech Stacks",
-            key: "tech-stacks",
-            icon: <FaScrewdriverWrench className="size-6"/>
+            key: "tech_stacks",
+            icon: <FaScrewdriverWrench className="size-6"/>,
+            content: ""
         }
     ]
 
@@ -39,25 +43,38 @@ export default function Portfolio() {
                 direction="top"
                 className="text-center m-auto text-6xl text-purple-300 font-semibold w-fit mt-25"
             />
-            <FadeContent 
-                blur={true} 
-                duration={1000} 
-                easing="ease-out" 
-                initialOpacity={0}
-            >
-                <div className="flex gap-4 bg-slate-100/20 w-9/10 m-auto p-2 rounded-md mt-10">
-                    {portfolioItems.map((item, index) => (
-                        <div 
-                            key={index} 
-                            className={cn("w-full p-2 text-center font-bold rounded-sm hover:bg-slate-500/20 cursor-target flex items-center justify-center gap-2", activeTabIndex == index && "bg-slate-500/20")}
-                            onClick={() => setActiveTabIndex(() => index)}
-                        >
-                            <div>{item.label}</div>
-                            <div>{item.icon}</div>
-                        </div>
-                    ))}
+            <div className="mt-10 w-9/10 m-auto">
+                <FadeContent 
+                    blur={true} 
+                    duration={1000} 
+                    easing="ease-out" 
+                    initialOpacity={0}
+                >
+                    <div className="flex gap-4 bg-slate-100/20 p-2 rounded-md">
+                        {portfolioItems.map((item, index) => (
+                            <div 
+                                key={index} 
+                                className={cn("w-full p-2 text-center font-bold rounded-sm hover:bg-slate-500/20 cursor-target flex items-center justify-center gap-2", activeTabIndex == index && "bg-slate-500/20")}
+                                onClick={() => setActiveTabIndex(() => index)}
+                            >
+                                <div>{item.label}</div>
+                                <div>{item.icon}</div>
+                            </div>
+                        ))}
+                    </div>
+                </FadeContent>
+
+                <div className="w-full mt-10">
+                    <FadeContent 
+                        blur={true} 
+                        duration={1000} 
+                        easing="ease-out" 
+                        initialOpacity={0}
+                    >
+                        {portfolioItems[activeTabIndex].content}
+                    </FadeContent>
                 </div>
-            </FadeContent>
+            </div>
         </section>
     )
 }

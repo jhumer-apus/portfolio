@@ -8,8 +8,8 @@ export default function About() {
 
     const handleDownload = (type: "resume" | "cv") => {
         const fileUrl = type === "cv"
-            ? "/docs/CV-Apus.pdf"
-            : "/docs/Resume-Apus.pdf";
+            ? "/assets/docs/CV-Apus.pdf"
+            : "/assets/docs/Resume-Apus.pdf";
 
         const link = document.createElement("a");
         link.href = fileUrl;

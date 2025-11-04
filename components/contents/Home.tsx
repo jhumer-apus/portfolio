@@ -16,7 +16,7 @@ export default function Home() {
             <div className="flex justify-between w-6/10 m-auto items-center">
                 <div className="w-full flex flex-col gap-6">
                     <TextType 
-                        text={["Hi, I'm Bogart The Great", "I'm a Web Developer", "I create cool websites for you"]}
+                        text={["Hi, I'm Jhumer Apus", "I'm a Web Developer", "I create cool websites for you"]}
                         typingSpeed={75}
                         pauseDuration={1500}
                         showCursor={true}
