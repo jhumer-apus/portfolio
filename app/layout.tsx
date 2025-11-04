@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jhumer Apus",
+  title: "Bogart Chuy",
   description: "Portfolio website of Jhumer Apus",
 };
 

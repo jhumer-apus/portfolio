@@ -9,7 +9,6 @@ interface Menu_T {
     icon?: JSX.Element | string | null
 }
 export default function Header() {
-    const [activeIndex, setActiveIndex] = useState(0);
 
     const items: Menu_T[] = [
         {
@@ -34,30 +33,8 @@ export default function Header() {
         },
     ]
 
-    useEffect(() => {
-        const sections = items.map(item => document.getElementById(item.href.replace("#", "")));
-
-        const observer = new IntersectionObserver(
-        (entries) => {
-            entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const index = items.findIndex(i => i.href.replace("#", "") === entry.target.id);
-                setActiveIndex(index);
-            }
-            });
-        },
-        { threshold: 0.5 } // 50% of section visible
-        );
-
-        sections.forEach(sec => sec && observer.observe(sec));
-
-        return () => {
-        sections.forEach(sec => sec && observer.unobserve(sec));
-        };
-    }, [items]);
-
     return (
-        <header className="bg-black/10 w-screen fixed top-0 p-12 px-24 flex justify-between text-2xl z-10">
+        <header className="bg-black/50 w-screen fixed top-0 py-4 px-24 flex justify-between text-2xl z-10">
             <div className="font-bold">
                 Jhumz <span className="text-purple-400">Dev</span>
             </div>
@@ -68,7 +45,7 @@ export default function Header() {
                     particleDistances={[90, 10]}
                     particleR={100}
                     animationTime={600}
-                    initialActiveIndex={activeIndex}
+                    initialActiveIndex={0}
                     timeVariance={300}
                     colors={[1, 2, 3, 1, 2, 3, 1, 4]}
                 />

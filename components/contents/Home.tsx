@@ -6,6 +6,9 @@ import TextType from "../animation/TextType";
 import SplitText from "../animation/SplitText";
 import Link from "next/link";
 import TargetCursor from "../animation/TargetCursor";
+import { FaPhone } from "react-icons/fa";
+import { FaScrewdriverWrench } from "react-icons/fa6";
+import FadeContent from "../animation/FadeContent";
 
 export default function Home() {
     return(
@@ -13,7 +16,7 @@ export default function Home() {
             <div className="flex justify-between w-6/10 m-auto items-center">
                 <div className="w-full flex flex-col gap-6">
                     <TextType 
-                        text={["Hi, I'm Jhumer Ojales Apus", "I'm a Web Developer", "I create cool websites for you"]}
+                        text={["Hi, I'm Bogart The Great", "I'm a Web Developer", "I create cool websites for you"]}
                         typingSpeed={75}
                         pauseDuration={1500}
                         showCursor={true}
@@ -36,8 +39,8 @@ export default function Home() {
                     <SplitText
                         text="Let's create awesome websites together!"
                         className="text-slate-100 text2xl"
-                        delay={100}
-                        duration={0.9}
+                        delay={50}
+                        duration={0.1}
                         ease="power3.out"
                         splitType="chars"
                         from={{ opacity: 0, y: 40 }}
@@ -51,8 +54,28 @@ export default function Home() {
                             spinDuration={3}
                             hideDefaultCursor={true}
                         />
-                        <Link href="#portofolio" className="p-2 rounded-md cursor-target text-sky-400">View My Work</Link>
-                        <Link href="#contact" className="p-2 rounded-md cursor-target text-sky-400">Contact</Link>
+                        <FadeContent 
+                            blur={true} 
+                            duration={1000} 
+                            easing="ease-out" 
+                            initialOpacity={0}
+                        >
+                            <Link href="#portfolio" className="p-2 rounded-md cursor-target text-pink-300 flex items-center gap-2">
+                                <div>View My Work</div>
+                                <FaScrewdriverWrench />
+                            </Link>
+                        </FadeContent>
+                        <FadeContent 
+                            blur={true} 
+                            duration={1000} 
+                            easing="ease-out" 
+                            initialOpacity={0}
+                        >
+                            <Link href="#contact" className="p-2 rounded-md cursor-target text-pink-300 flex items-center gap-2">
+                                <div>Contact Me</div>
+                                <FaPhone />
+                            </Link>
+                        </FadeContent>
                     </div>              
                 </div>
  
