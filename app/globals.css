@@ -58,6 +58,14 @@ body {
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+.description {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);

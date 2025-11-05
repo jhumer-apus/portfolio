@@ -1,8 +1,8 @@
 "use client";
 
-import BlurText from "../animation/BlurText";
-import ElectricBorder from "../animation/ElectricBorder";
-import FadeContent from "../animation/FadeContent";
+import BlurText from "@/components/animation/BlurText";
+import ElectricBorder from "@/components/animation/ElectricBorder";
+import FadeContent from "@/components/animation/FadeContent";
 
 export default function About() {
 

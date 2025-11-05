@@ -50,17 +50,13 @@ export default function Home() {
                         textAlign="left"
                     />
                     <div className="flex gap-6 text-xl font-semibold">
-                        <TargetCursor 
-                            spinDuration={3}
-                            hideDefaultCursor={true}
-                        />
                         <FadeContent 
                             blur={true} 
                             duration={1000} 
                             easing="ease-out" 
                             initialOpacity={0}
                         >
-                            <Link href="#portfolio" className="p-2 rounded-md cursor-target text-pink-300 flex items-center gap-2">
+                            <Link href="/portfolio" className="p-2 rounded-md cursor-target text-pink-300 flex items-center gap-2">
                                 <div>View My Work</div>
                                 <FaScrewdriverWrench />
                             </Link>
@@ -71,7 +67,7 @@ export default function Home() {
                             easing="ease-out" 
                             initialOpacity={0}
                         >
-                            <Link href="#contact" className="p-2 rounded-md cursor-target text-pink-300 flex items-center gap-2">
+                            <Link href="/contact" className="p-2 rounded-md cursor-target text-pink-300 flex items-center gap-2">
                                 <div>Contact Me</div>
                                 <FaPhone />
                             </Link>

@@ -1,12 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import BlurText from "../animation/BlurText";
 import { cn } from "@/lib/utils";
 import { FaCertificate, FaCode } from "react-icons/fa";
 import { FaScrewdriverWrench } from "react-icons/fa6";
-import FadeContent from "../animation/FadeContent";
-import Projects from "./portfolio/Projects";
+import Projects from "@/components/contents/portfolio/Projects";
+import BlurText from "@/components/animation/BlurText";
+import FadeContent from "@/components/animation/FadeContent";
 
 export default function Portfolio() {
 

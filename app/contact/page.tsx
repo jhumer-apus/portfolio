@@ -1,10 +1,10 @@
 "use client";
 
+import BlurText from "@/components/animation/BlurText";
+import FadeContent from "@/components/animation/FadeContent";
+import ContactDetails from "@/components/contents/contacts/ContactDetails";
+import ContactForm from "@/components/contents/contacts/ContactForm";
 import { FaPhone } from "react-icons/fa";
-import BlurText from "../animation/BlurText";
-import ContactDetails from "./contacts/ContactDetails";
-import ContactForm from "./contacts/ContactForm";
-import FadeContent from "../animation/FadeContent";
 
 export default function Contact() {
 
