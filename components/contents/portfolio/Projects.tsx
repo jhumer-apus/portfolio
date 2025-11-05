@@ -1,5 +1,6 @@
 import { projects } from "@/data/projects";
 import PortfolioCard from "./PortfolioCard";
+import TargetCursor from "@/components/animation/TargetCursor";
 
 export default function Projects() {
 

@@ -11,7 +11,7 @@ export default function PortfolioCard(props: Props) {
     const { title, description , href, imgSrc } = props;
 
     return (
-        <Link href={href} className="block">
+        <Link href={href} className="block cursor-pointer">
             <SpotlightCard className="md:w-72 h-96 custom-spotlight-card rounded-2xl bg-slate-800/50 border-2 border-purple-300/20 cursor-target" spotlightColor="rgba(0, 229, 255, 0.2)">
                 <div className="h-48 md:w-62 rounded-2xl overflow-hidden bg-red-100 m-auto">
                     <img src={imgSrc} className="w-full h-full object-cover object-center" />

@@ -1,48 +1,44 @@
-import { FaDiscord, FaEnvelopeOpenText, FaFacebookF, FaGithub, FaInstagram, FaLinkedinIn, FaPhone, FaViber } from "react-icons/fa"
+import Link from "next/link"
+import { FaEnvelopeOpenText, FaFacebookF, FaGithub, FaInstagram, FaLinkedinIn, FaPhone, FaViber } from "react-icons/fa"
 
 export default function ContactDetails() {
 
     const contactItems = [
         {
-            label: "bogart@gmail.com",
-            href: "bogart@gmail.com",
+            label: "jhumerapus@gmail.com",
+            href: "",
             icon: <FaEnvelopeOpenText />
         },
         {
-            label: "+63-912-3456-789",
+            label: "+63-931-753-1962",
             href: "",
             icon: <FaPhone />
         },
         {
-            label: "Boogart",
-            href: "Boogart.com",
+            label: "Jhumer Apus",
+            href: "https://www.linkedin.com/in/jhumer-apus-10b32a1ab/",
             icon: <FaLinkedinIn />
         },
         {
-            label: "FB",
-            href: "fb.com",
+            label: "Jhumer Apus",
+            href: "https://www.facebook.com/jhumer.apus.1/",
             icon: <FaFacebookF />
         },
         {
-            label: "Instagram",
-            href: "instagram.com",
+            label: "maybe_jhumz",
+            href: "https://www.instagram.com/maybe_jhumz/",
             icon: <FaInstagram />
         },
         {
-            label: "Viber",
-            href: "viber.com",
+            label: "+63-931-753-1962",
+            href: "",
             icon: <FaViber />
         },
         {
-            label: "Github",
-            href: "github.com",
+            label: "jhumer-apus",
+            href: "https://github.com/jhumer-apus",
             icon: <FaGithub />
         },
-        {
-            label: "Discord",
-            href: "discord.com",
-            icon: <FaDiscord />
-        }
     ]
     return (
         <div className="flex md:w-[500px] flex-col rounded-sm p-8 gap-3">
@@ -56,7 +52,7 @@ export default function ContactDetails() {
                     >
                         {item.icon}
                         {item.href 
-                            ? <a href={item.href} target="_blank">{item.label}</a>
+                            ? <Link href={item.href} target="_blank" className="block hover:underline">{item.label}</Link>
                             :<p>{item.label}</p>
                         }
                     </div>

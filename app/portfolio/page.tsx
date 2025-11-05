@@ -50,7 +50,7 @@ export default function Portfolio() {
                     easing="ease-out" 
                     initialOpacity={0}
                 >
-                    <div className="flex gap-4 bg-slate-100/20 p-2 rounded-md">
+                    <div className="flex gap-4 bg-slate-100/20 p-2 rounded-md cursor-pointer">
                         {portfolioItems.map((item, index) => (
                             <div 
                                 key={index} 

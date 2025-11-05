@@ -1,6 +1,7 @@
 "use client";
 
 import AnimatedContent from "@/components/animation/AnimatedContent";
+import TargetCursor from "@/components/animation/TargetCursor";
 import KeyFeatures from "@/components/contents/portfolio/project/KeyFeatures";
 import ProjectDetails from "@/components/contents/portfolio/project/ProjectDetails";
 import { projects } from "@/data/projects";
@@ -13,6 +14,8 @@ export default function Project() {
     const project = projects.find(proj => proj.id == Number(id))
     return (
         <div className="my-30 flex gap-28 justify-center">
+            <TargetCursor spinDuration={3} hideDefaultCursor={true} />
+
             {/* Left */}
             <AnimatedContent
                 distance={150}

@@ -3,7 +3,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import ParticlesBackground from "@/components/animation/ParticlesBackground"; // client component
-import TargetCursor from "@/components/animation/TargetCursor"; // client component
 import Header from "@/components/Header";
 
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
@@ -20,7 +19,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}>
         {/* Client components are allowed inside a server component */}
         <ParticlesBackground /> 
-        <TargetCursor spinDuration={3} hideDefaultCursor={true} />
         <Header />
         {children}
       </body>

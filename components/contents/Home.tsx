@@ -13,6 +13,7 @@ import FadeContent from "../animation/FadeContent";
 export default function Home() {
     return(
         <section id="home" className="h-screen p-8 flex flex-col justify-center">
+            <TargetCursor spinDuration={3} hideDefaultCursor={true} />
             <div className="flex justify-between w-6/10 m-auto items-center">
                 <div className="w-full flex flex-col gap-6">
                     <TextType 
@@ -56,9 +57,9 @@ export default function Home() {
                             easing="ease-out" 
                             initialOpacity={0}
                         >
-                            <Link href="/portfolio" className="p-2 rounded-md cursor-target text-pink-300 flex items-center gap-2">
+                            <Link href="/portfolio" className="p-2 rounded-md cursor-target text-indigo-300 flex items-center gap-2">
                                 <div>View My Work</div>
-                                <FaScrewdriverWrench />
+                                <FaScrewdriverWrench className="text-gray-300"/>
                             </Link>
                         </FadeContent>
                         <FadeContent 
@@ -67,9 +68,9 @@ export default function Home() {
                             easing="ease-out" 
                             initialOpacity={0}
                         >
-                            <Link href="/contact" className="p-2 rounded-md cursor-target text-pink-300 flex items-center gap-2">
+                            <Link href="/contact" className="p-2 rounded-md cursor-target text-indigo-300 flex items-center gap-2">
                                 <div>Contact Me</div>
-                                <FaPhone />
+                                <FaPhone className="text-gray-300" />
                             </Link>
                         </FadeContent>
                     </div>              
