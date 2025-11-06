@@ -3,6 +3,7 @@
 import { JSX, useRef } from "react";
 import GooeyNav from "./animation/GooeyNav";
 import { usePathname } from "next/navigation";
+import { constrainedMemory } from "process";
 
 interface Menu_T {
     label: string;
@@ -38,7 +39,12 @@ export default function Header() {
         },
     ]
 
-    const currRouteIndex = items.findIndex(item => item.href == pathname);
+    const currRouteIndex = items.findIndex(item => {
+        if (item.href === "/") {
+            return pathname === "/";
+        }
+        return pathname.startsWith(item.href + "/") || pathname === item.href;
+    });
 
     return (
         <header className="bg-black/50 w-screen fixed top-0 py-4 px-24 flex justify-between text-2xl z-10">

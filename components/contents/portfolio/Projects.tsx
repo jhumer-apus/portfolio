@@ -1,6 +1,5 @@
 import { projects } from "@/data/projects";
 import PortfolioCard from "./PortfolioCard";
-import TargetCursor from "@/components/animation/TargetCursor";
 
 export default function Projects() {
 
@@ -10,7 +9,7 @@ export default function Projects() {
                 <PortfolioCard 
                     key={index}
                     {...project}
-                    href={"/projects/" + project.id}
+                    href={"/portfolio/projects/" + project.id}
                 />
             ))}
         </div>

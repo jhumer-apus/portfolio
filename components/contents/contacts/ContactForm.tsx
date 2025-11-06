@@ -1,5 +1,9 @@
+import { cn } from "@/lib/utils";
 import { contactSchema } from "@/lib/validation/contact-scheme";
+import axios from "axios";
 import { ErrorMessage, Field, Form, Formik, FormikHelpers, FormikValues } from "formik";
+import { useTransition } from "react";
+import { toast } from "react-toastify";
 
 interface Values {
     email: string;
@@ -9,14 +13,31 @@ interface Values {
 
 export default function ContactForm() {
 
+    const [isPending, startTransition] = useTransition()
+
     const initialValues: Values = { 
         email: "", 
         name: "", 
         message: ""
     };
 
-    const onSubmit = async (values: Values, helpers: FormikHelpers<Values>) => {
-        console.log(values)
+    const onSubmit = async (values: Values) => {
+        startTransition(async() => {
+            await axios.post("/api/mail", values)
+                .then(() => {
+                    toast.success("Your message was successfully sent to Mr.Handsome 😎")
+                })
+                .catch((err) => {
+                    const error = err?.response?.data?.error
+                    if(error) {
+                        toast.error(error + " 😞")
+                    } else {
+                        toast.error("Something went wrong on the form, please use the contact details 😢")
+                    }
+   
+                })
+        })
+
     };
 
     return(
@@ -67,11 +88,16 @@ export default function ContactForm() {
                         </div>
 
                         <div className="flex justify-end">
-                            <button 
-                                type="submit" 
-                                disabled={isSubmitting}
-                                className="border-1 border-slate-100/20 bg-purple-400/20 py-2 px-6 w-fit rounded-lg cursor-target hover:bg-purple-800/50 active:bg-purple-700/50"
-                            >
+                            <button
+                                type="submit"
+                                disabled={isPending || isSubmitting}
+                                className={cn(
+                                    "border border-slate-100/20 bg-purple-400/20 py-2 px-6 w-fit rounded-lg transition-colors duration-200",
+                                    !isPending && !isSubmitting
+                                        ? "cursor-pointer hover:bg-purple-800/50 active:bg-purple-700/50"
+                                        : "cursor-not-allowed opacity-50"
+                                )}
+                                >
                                 Submit
                             </button>
 

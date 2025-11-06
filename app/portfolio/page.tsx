@@ -7,6 +7,7 @@ import { FaScrewdriverWrench } from "react-icons/fa6";
 import Projects from "@/components/contents/portfolio/Projects";
 import BlurText from "@/components/animation/BlurText";
 import FadeContent from "@/components/animation/FadeContent";
+import TechStacks from "@/components/contents/portfolio/tech_stacks/TechStacks";
 
 export default function Portfolio() {
 
@@ -29,7 +30,7 @@ export default function Portfolio() {
             label: "Tech Stacks",
             key: "tech_stacks",
             icon: <FaScrewdriverWrench className="size-6"/>,
-            content: ""
+            content: <TechStacks />
         }
     ]
 

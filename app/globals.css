@@ -20,6 +20,13 @@ body {
   @apply text-red-400
 }
 
+/* globals.css or toast.css */
+@media (min-width: 768px) { /* md breakpoint */
+  .custom-toast {
+    width: 400px;
+  }
+}
+
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);

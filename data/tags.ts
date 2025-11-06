@@ -5,7 +5,7 @@ export const Tags = {
     },
     apache: {
         imgSrc: "/assets/tags/apache.png",
-        label: "Digital Ocean"
+        label: "Apache"
     },
     css: {
         imgSrc: "/assets/tags/css.png",
@@ -20,7 +20,7 @@ export const Tags = {
         label: "HTML"
     },
     javascript: {
-        imgSrc: "/assets/tags/js.png",
+        imgSrc: "/assets/tags/javascript.png",
         label: "Javascript"
     },
     laravel: {

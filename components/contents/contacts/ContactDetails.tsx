@@ -20,7 +20,7 @@ export default function ContactDetails() {
             icon: <FaLinkedinIn />
         },
         {
-            label: "Jhumer Apus",
+            label: "Jhumer Ojales Apus",
             href: "https://www.facebook.com/jhumer.apus.1/",
             icon: <FaFacebookF />
         },
