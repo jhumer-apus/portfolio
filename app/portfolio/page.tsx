@@ -8,6 +8,7 @@ import Projects from "@/components/contents/portfolio/Projects";
 import BlurText from "@/components/animation/BlurText";
 import FadeContent from "@/components/animation/FadeContent";
 import TechStacks from "@/components/contents/portfolio/tech_stacks/TechStacks";
+import Certificates from "@/components/contents/portfolio/Certificates";
 
 export default function Portfolio() {
 
@@ -24,7 +25,7 @@ export default function Portfolio() {
             label: "Certificates",
             key: "certificates",
             icon: <FaCertificate className="size-6"/>,
-            content: ""
+            content: <Certificates />
         },
         {
             label: "Tech Stacks",
