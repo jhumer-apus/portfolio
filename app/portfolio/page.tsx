@@ -52,11 +52,11 @@ export default function Portfolio() {
                     easing="ease-out" 
                     initialOpacity={0}
                 >
-                    <div className="flex gap-4 bg-slate-100/20 p-2 rounded-md cursor-pointer">
+                    <div className="flex gap-4 bg-gray-100/10 p-2 rounded-full cursor-pointer text-indigo-300">
                         {portfolioItems.map((item, index) => (
                             <div 
                                 key={index} 
-                                className={cn("w-full p-2 text-center font-bold rounded-sm hover:bg-slate-500/20 cursor-target flex items-center justify-center gap-2", activeTabIndex == index && "bg-slate-500/20")}
+                                className={cn("w-full p-2 text-center font-bold rounded-full hover:bg-gray-500/20 cursor-target flex items-center justify-center gap-2", activeTabIndex == index && "bg-gray-500/50")}
                                 onClick={() => setActiveTabIndex(() => index)}
                             >
                                 <div>{item.label}</div>

@@ -49,7 +49,7 @@ export default function Certificate() {
                     threshold={0.2}
                     delay={0.3}
                     >
-                    <div id="image-project" className="md:h-90 rounded-xl overflow-hidden">
+                    <div id="image-project" className="md:h-90 overflow-hidden">
                         <img src={certificate?.imgSrc} className="w-full h-full object-cover object-center"/>
                     </div>
                 </AnimatedContent>

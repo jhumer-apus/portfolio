@@ -17,7 +17,7 @@ export const certificates: CertificateProps[] = [
             dateIssued: dayjs("July 23, 2021"),
             description: "On July 23, 2021, I took my first step into the world of web development! That’s the day I started learning web development and successfully completed the Responsive Web Design course. It was the beginning of a journey that taught me how creativity and logic come together to build something meaningful on the web. 🚀",
             hashTags: "#WebDevelopment #ResponsiveDesign #LearningJourney #Coding #FrontEndDevelopment", 
-            imgSrc: "/assets/certificates/cert_responsive_web design.png",
+            imgSrc: "/assets/certificates/cert_responsive_web_design.png",
             pdfSrc: "",
             srcLink: "https://www.freecodecamp.org/certification/jhumer-apus/responsive-web-design"
         },
