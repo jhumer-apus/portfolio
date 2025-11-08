@@ -27,17 +27,17 @@ export default function ProjectDetails({ project }:Props) {
                 <p className="text-gray-200">{project?.description}</p>
             </div>
 
-            <div className="flex items-center mt-10 gap-4 text-xl text-sky-300">
+            <div className="flex items-center mt-10 gap-4 text-lg">
                 <button 
                     onClick={() => handleOpenLink()}
-                    className="cursor-target hover:bg-gray-600/50 bg-gray-900/50 py-2 flex items-center gap-2 rounded-lg justify-center w-28 border border-white/30"
+                    className="cursor-pointer hover:bg-gray-600/50 bg-gray-900/50 py-2 flex items-center gap-2 rounded-lg justify-center w-28 border border-white/30"
                 >
                     <p>Link</p>
                     <FaExternalLinkAlt />
                 </button>
                 <button 
                     onClick={() => handleOpenCode()}
-                    className="cursor-target hover:bg-gray-600/50 bg-gray-900/50 py-2 flex items-center gap-2 rounded-lg justify-center w-28 border border-white/30"
+                    className="cursor-pointer hover:bg-gray-600/50 bg-gray-900/50 py-2 flex items-center gap-2 rounded-lg justify-center w-28 border border-white/30"
                 >
                     <p>Code</p>
                     <FaCode />

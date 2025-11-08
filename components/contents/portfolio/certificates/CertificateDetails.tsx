@@ -35,17 +35,17 @@ export default function CertificateDetails({ certificate }:Props) {
                 <p className="text-gray-200">{certificate?.description}</p>
             </div>
 
-            <div className="flex items-center mt-10 gap-4 text-xl text-gray-300">
+            <div className="flex items-center mt-10 gap-4 text-lg text-gray-300">
                 <button 
                     onClick={() => handleOpenSrc()}
-                    className="cursor-target hover:bg-gray-600/50 bg-gray-900/50 py-2 flex items-center gap-2 rounded-lg justify-center w-40 border border-white/30"
+                    className="cursor-pointer hover:bg-gray-600/50 bg-gray-900/50 py-2 flex items-center gap-2 rounded-lg justify-center w-40 border border-white/30"
                 >
                     <p>View Source</p>
                     <FaExternalLinkAlt />
                 </button>
                 <button 
                     onClick={() => handleDownloadPDF()}
-                    className="cursor-target hover:bg-gray-600/50 bg-gray-900/50 py-2 flex items-center gap-2 rounded-lg justify-center w-44 border border-white/30"
+                    className="cursor-pointer hover:bg-gray-600/50 bg-gray-900/50 py-2 flex items-center gap-2 rounded-lg justify-center w-44 border border-white/30"
                 >
                     <p>Download PDF</p>
                     <FaFileDownload />

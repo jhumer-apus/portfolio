@@ -8,6 +8,7 @@ import ProjectDetails from "@/components/contents/portfolio/project/ProjectDetai
 import { certificates } from "@/data/certificates";
 import { projects } from "@/data/projects";
 import { useParams } from "next/navigation";
+import { PhotoProvider, PhotoView } from "react-photo-view";
 
 
 export default function Certificate() {
@@ -16,7 +17,6 @@ export default function Certificate() {
     const certificate = certificates.find(cert => cert.id == Number(id))
     return (
         <div className="my-30 flex gap-28 justify-center">
-            <TargetCursor spinDuration={3} hideDefaultCursor={true} />
 
             {/* Left */}
             <AnimatedContent
@@ -50,7 +50,11 @@ export default function Certificate() {
                     delay={0.3}
                     >
                     <div id="image-project" className="md:h-90 overflow-hidden">
-                        <img src={certificate?.imgSrc} className="w-full h-full object-cover object-center"/>
+                        <PhotoProvider>
+                            <PhotoView src={certificate?.imgSrc}>
+                                <img src={certificate?.imgSrc} className="cursor-pointer w-full h-full object-cover object-center"/>
+                            </PhotoView>
+                        </PhotoProvider>
                     </div>
                 </AnimatedContent>
                 
