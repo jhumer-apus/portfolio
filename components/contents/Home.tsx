@@ -57,7 +57,7 @@ export default function Home() {
                             easing="ease-out" 
                             initialOpacity={0}
                         >
-                            <Link href="/portfolio" className="p-2 rounded-md cursor-target text-indigo-300 flex items-center gap-2">
+                            <Link href="/portfolio" className="block border border-indigo-500 hover:bg-gray-500/20 p-2 rounded-xl cursor-target text-indigo-300 flex items-center gap-2">
                                 <div>View My Work</div>
                                 <FaScrewdriverWrench className="text-gray-300"/>
                             </Link>
@@ -68,7 +68,7 @@ export default function Home() {
                             easing="ease-out" 
                             initialOpacity={0}
                         >
-                            <Link href="/contact" className="p-2 rounded-md cursor-target text-indigo-300 flex items-center gap-2">
+                            <Link href="/contact" className="block border border-indigo-500 hover:bg-gray-500/20 p-2 rounded-xl cursor-target text-indigo-300 flex items-center gap-2">
                                 <div>Contact Me</div>
                                 <FaPhone className="text-gray-300" />
                             </Link>

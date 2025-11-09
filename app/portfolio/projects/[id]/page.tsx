@@ -37,10 +37,12 @@ export default function Project() {
                 <section id="right-project-details" className="md:w-[500px]">
                     <div id="video-wrapper" className="w-full h-96 mb-5">
                         {project?.videoSrc ? (
-                            <video
-                                src={project.videoSrc}
-                                controls
+                            <iframe
                                 className="size-full"
+                                src={project?.videoSrc}
+                                title="Bitverse"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowFullScreen
                             />
                         ): (
                             <div className="size-full p-4 border rounded-xl bg-black  flex flex-col justify-center">

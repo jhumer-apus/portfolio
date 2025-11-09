@@ -13,12 +13,16 @@ export default function ProjectDetails({ project }:Props) {
     const handleOpenCode = () => {
         if(!project?.repositoryLink) {
             toast.error("Sorry I don't have the access for the repository anymore😞")
+            return
         }
+        window.open(project?.repositoryLink, "_blank");
     }
     const handleOpenLink = () => {
         if(!project?.websiteLink) {
             toast.error("Sorry I don't know the link of the website now😞")
+            return
         }
+        window.open(project.websiteLink, "_blank");
     }
     return (
         <section id="left-project-details" className="md:max-w-[500px]">

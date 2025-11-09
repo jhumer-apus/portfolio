@@ -16,13 +16,13 @@ export const projects: ProjectProps[] = [
         {
             id: 1,
             title: "Human Resources Information System",
-            description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-            imgSrc: "/assets/abs.jpg",
-            thumbnails: ["/assets/abs.jpg", "/assets/abs.jpg", "/assets/abs.jpg", "/assets/abs.jpg", "/assets/abs.jpg" , "/assets/abs.jpg", "/assets/abs.jpg", "/assets/abs.jpg", "/assets/abs.jpg"],
+            description: "The Human Resource Information System (HRIS) is a web-based platform designed to streamline HR operations for Philippine businesses. It centralizes employee records, attendance tracking, payroll management, and performance monitoring in one system. The HRIS is fully adaptable to local labor practices — including government-mandated contributions such as SSS, PhilHealth, Pag-IBIG, and BIR compliance. It helps companies reduce manual work, minimize payroll errors, and improve workforce transparency. Whether for small enterprises or large corporations, the HRIS simplifies HR processes and enhances efficiency, allowing organizations to focus on growth and employee development.",
+            imgSrc: "/assets/skyfreight-hris.png",
+            thumbnails: ["/assets/skyfreight-hris.png"],
             tags: ["react", "mui", "digital_ocean", "redux"],
             repositoryLink: "",
-            websiteLink: "",
-            videoSrc: null,
+            websiteLink: "https://skyfreight-bithris.com/",
+            videoSrc: "https://www.youtube.com/embed/tXv2ZfghK0E?si=H7EZ3EN5_en5zr7Q",
             keyFeatures: [
                 "Employee Information Management",
                 "Time and Attendance Tracking",
@@ -30,6 +30,25 @@ export const projects: ProjectProps[] = [
                 "Recruitment and Onboarding",
                 "Analytics and Reporting",
                 "Violation Management",
+            ]
+        },
+        {
+            id: 2,
+            title: "Bitverse Website",
+            description: "This is a website for Bitverse Company. It primarily showcases our system, the HRIS software. On this site, we also mention that we offer MVP software development services. This marketing website helps clients explore what Bitverse can offer.",
+            imgSrc: "/assets/projects/bitverse/bitverse-website.png",
+            thumbnails: ["/assets/projects/bitverse/bitverse-website.png"],
+            tags: ["react", "nodejs", "javascript", "html", "tailwind", "css"],
+            repositoryLink: "",
+            websiteLink: "https://bitverseph.com/",
+            videoSrc: "https://www.youtube.com/embed/Uxs9LHTFGnk?si=zSJrUKH4ghDKkSgI",
+            keyFeatures: [
+                "Home page for an overall introduction",
+                "About page that introduces what Bitverse is all about",
+                "Services page showcasing our projects",
+                "Partners page highlighting our clients",
+                "Contact page where users can reach out to the company",
+                "Book a demo feature for scheduling a live product demonstration",
             ]
         },
     ]
