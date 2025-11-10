@@ -79,5 +79,13 @@ export const Tags = {
         imgSrc: "/assets/tags/zustand.png",
         label: "Zustand"
     },
+    mysql: {
+        imgSrc: "/assets/tags/mysql.png",
+        label: "MySQL"
+    },
+    sass: {
+        imgSrc: "/assets/tags/sass.png",
+        label: "Sass"
+    },
 }
 
