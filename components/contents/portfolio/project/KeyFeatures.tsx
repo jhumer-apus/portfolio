@@ -15,7 +15,7 @@ export default function KeyFeatures({ project }: Props) {
                 <ul className="text-lg ml-6 text-gray-200 flex flex-col gap-3">
                     {project?.keyFeatures.map((feat, index) => (
                         <li key={index} className="flex items-center gap-4">
-                            <FaCircle className="text-indigo-400"/>
+                            <FaCircle className="text-indigo-400 shrink-0" size={15}/>
                             <p>{feat}</p>
                         </li>
                     ))}

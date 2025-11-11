@@ -87,5 +87,13 @@ export const Tags = {
         imgSrc: "/assets/tags/sass.png",
         label: "Sass"
     },
+    bootstrap: {
+        imgSrc: "/assets/tags/bootstrap.png",
+        label: "Bootstrap"
+    },
+    leafletjs: {
+        imgSrc: "/assets/tags/leafletjs.png",
+        label: "Leafletjs"
+    },
 }
 
