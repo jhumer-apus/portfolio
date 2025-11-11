@@ -67,14 +67,7 @@ export default function Portfolio() {
                 </FadeContent>
 
                 <div className="w-full mt-10">
-                    <FadeContent 
-                        blur={true} 
-                        duration={1000} 
-                        easing="ease-out" 
-                        initialOpacity={0}
-                    >
-                        {portfolioItems[activeTabIndex].content}
-                    </FadeContent>
+                    {portfolioItems[activeTabIndex].content}
                 </div>
             </div>
         </section>
