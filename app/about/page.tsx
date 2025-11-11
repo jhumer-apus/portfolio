@@ -92,7 +92,7 @@ export default function About() {
                         >
                             <div className="size-64 p-4">
                                 <img
-                                    src="/assets/mirror-shot.jpg"
+                                    src="/assets/formal-pic.png"
                                     alt="Profile"
                                     className="w-full h-full object-cover rounded-2xl shadow-2xl"
                                 />
