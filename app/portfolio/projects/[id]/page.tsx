@@ -22,9 +22,23 @@ export default function Project() {
         slidesToShow: 3,
         slidesToScroll: 1,
         arrows: true,
+        responsive: [
+            {
+                breakpoint: 300, 
+                settings: {
+                    slidesToShow: 1,
+                },
+            },
+            {
+                breakpoint: 400,
+                settings: {
+                    slidesToShow: 2,
+                },
+            },
+        ],
     };
     return (
-        <div className="my-30 flex gap-28 justify-center">
+        <div className="my-30 flex flex-col-reverse md:flex-row gap-28 justify-center p-8">
 
             {/* Left */}
             <FadeContent blur={true} duration={1000} easing="ease-out" initialOpacity={0}>

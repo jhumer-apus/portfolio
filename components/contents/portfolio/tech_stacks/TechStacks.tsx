@@ -19,7 +19,7 @@ export default function TechStacks() {
                         initialOpacity={0.2}
                         animateOpacity
                         scale={1.1}
-                        threshold={0.2}
+                        threshold={0.1}
                         delay={0.1}
                     >
                         <GlareHover

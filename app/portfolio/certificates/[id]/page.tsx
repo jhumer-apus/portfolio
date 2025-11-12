@@ -1,12 +1,8 @@
 "use client";
 
 import AnimatedContent from "@/components/animation/AnimatedContent";
-import TargetCursor from "@/components/animation/TargetCursor";
 import CertificateDetails from "@/components/contents/portfolio/certificates/CertificateDetails";
-import KeyFeatures from "@/components/contents/portfolio/project/KeyFeatures";
-import ProjectDetails from "@/components/contents/portfolio/project/ProjectDetails";
 import { certificates } from "@/data/certificates";
-import { projects } from "@/data/projects";
 import { useParams } from "next/navigation";
 import { PhotoProvider, PhotoView } from "react-photo-view";
 
@@ -16,7 +12,7 @@ export default function Certificate() {
 
     const certificate = certificates.find(cert => cert.id == Number(id))
     return (
-        <div className="my-30 flex gap-28 justify-center">
+        <div className="my-30 flex flex-col-reverse md:flex-row gap-28 justify-center p-6">
 
             {/* Left */}
             <AnimatedContent

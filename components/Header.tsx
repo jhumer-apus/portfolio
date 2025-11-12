@@ -1,43 +1,14 @@
 "use client";
 
-import { JSX, useRef } from "react";
+import { useRef } from "react";
 import GooeyNav from "./animation/GooeyNav";
 import { usePathname } from "next/navigation";
-import { constrainedMemory } from "process";
-
-interface Menu_T {
-    label: string;
-    href: string;
-    icon?: JSX.Element | string | null
-}
+import { items } from "@/data/routes";
 
 export default function Header() {
 
     const audioRef = useRef<HTMLAudioElement | null>(null);
     const pathname = usePathname()    
-
-    const items: Menu_T[] = [
-        {
-            label: "Home",
-            href: "/",
-            icon: ""
-        },
-        {
-            label: "About",
-            href: "/about",
-            icon: ""
-        },
-        {
-            label: "Portfolio",
-            href: "/portfolio",
-            icon: ""
-        },
-        {
-            label: "Contact",
-            href: "/contact",
-            icon: ""
-        },
-    ]
 
     const currRouteIndex = items.findIndex(item => {
         if (item.href === "/") {
@@ -47,7 +18,7 @@ export default function Header() {
     });
 
     return (
-        <header className="bg-black/50 w-screen fixed top-0 py-4 px-24 flex justify-between text-2xl z-10">
+        <header className="hidden md:flex bg-black/50 w-screen fixed top-0 py-4 px-24 justify-between text-2xl z-10">
             <div className="font-bold flex items-center gap-4">
                 <audio ref={audioRef} src="/assets/audio/song.mp3" preload="auto" loop />
                 <div>Jhumz <span className="text-purple-400">Dev</span></div>

@@ -8,6 +8,8 @@ import 'react-photo-view/dist/react-photo-view.css';
 import ParticlesBackground from "@/components/animation/ParticlesBackground"; // client component
 import Header from "@/components/Header";
 import ToastProvider from "@/components/ToastProvider";
+import HeaderMobile from "@/components/HeaderMobile";
+import SideBar from "@/components/SideBar";
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
@@ -22,7 +24,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased relative`}>
         <ToastProvider />
         <ParticlesBackground /> 
-        <Header />
+
+        {/* Header and Header Mobile */}
+        <Header /> 
+        <HeaderMobile />
+
+        <SideBar />
         {children}
       </body>
     </html>

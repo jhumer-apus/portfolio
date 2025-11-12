@@ -20,23 +20,23 @@ export default function About() {
     }
 
     return(
-        <section id="about" className="min-h-screen flex flex-col justify-center items-center">
+        <section id="about" className="min-h-screen flex flex-col justify-center items-center py-24 lg:py-0 px-4">
             <TargetCursor spinDuration={3} hideDefaultCursor={true} />
             <BlurText
                 text="About"
                 delay={200}
                 animateBy="words"
                 direction="top"
-                className="text-center text-6xl text-purple-300 font-semibold"
+                className="justify-center text-3xl lg:text-6xl text-purple-300 font-semibold"
             />
             <BlurText
                 text="Transform your dreams into digital experiences"
                 delay={200}
                 animateBy="words"
                 direction="top"
-                className="text-center text-3xl text-slate-200 font-semi-bold"
+                className="justify-center text-2xl lg:text-3xl text-slate-200 font-semi-bold"
             />
-            <div className="flex gap-10 mt-20 w-6/10 items-center">
+            <div className="flex flex-col-reverse lg:flex-row gap-10 mt-20 lg:w-6/10 items-center">
                 <div id="about-details">
                     <BlurText
                         text="
@@ -44,7 +44,7 @@ export default function About() {
                         delay={50}
                         animateBy="words"
                         direction="top"
-                        className="text-center text-xl text-slate-300 font-semi-bold"
+                        className="lg:text-xl text-slate-300 font-semi-bold justify-center"
                     />
                         <AnimatedContent
                             distance={150}
@@ -59,16 +59,16 @@ export default function About() {
                             delay={0.3}
                         >
             
-                            <div className="flex gap-4 mt-10">
+                            <div className="flex gap-4 w-fit mx-auto mt-10 lg:mx-0">
                                 <button 
                                     onClick={() => handleDownload("resume")}
-                                    className="active:bg-slate-700 bg-slate-900 py-2 px-4 rounded-lg cursor-target border-3 border-purple-900/30"
+                                    className="active:bg-slate-700 bg-slate-900 py-2 px-4 cursor-target border-3 border-purple-900/30 text-md"
                                 >
                                     Download Resume
                                 </button>
                                 <button 
                                     onClick={() => handleDownload("cv")}
-                                    className="active:bg-slate-700 bg-slate-900 py-2 px-4 rounded-lg cursor-target border-3 border-purple-900/30"
+                                    className="active:bg-slate-700 bg-slate-900 py-2 px-4 cursor-target border-3 border-purple-900/30 text-md"
                                 >
                                     Download CV
                                 </button>
@@ -90,7 +90,7 @@ export default function About() {
                             thickness={6}
                             className="rounded-2xl"
                         >
-                            <div className="size-64 p-4">
+                            <div className="size-50 lg:size-64 p-4">
                                 <img
                                     src="/assets/formal-pic-transparent.png"
                                     alt="Profile"

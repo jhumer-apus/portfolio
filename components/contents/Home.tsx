@@ -14,7 +14,7 @@ export default function Home() {
     return(
         <section id="home" className="h-screen p-8 flex flex-col justify-center">
             <TargetCursor spinDuration={3} hideDefaultCursor={true} />
-            <div className="flex justify-between w-6/10 m-auto items-center">
+            <div className="flex flex-col-reverse md:flex-row md:justify-between md:w-6/10 m-auto items-center">
                 <div className="w-full flex flex-col gap-6">
                     <TextType 
                         text={["Hi, I'm Jhumer Apus", "I'm a Web Developer", "I create cool websites for you"]}
@@ -22,11 +22,11 @@ export default function Home() {
                         pauseDuration={1500}
                         showCursor={true}
                         cursorCharacter="|"
-                        className="text-4xl font-semibold"
+                        className="text-center md:text-left text-2xl md:text-4xl font-semibold"
                     />
                     <SplitText
                         text="Web Developer"
-                        className="text-purple-300 text-3xl font-semibold"
+                        className="text-center md:text-left text-purple-300 text-xl md:text-3xl font-semibold"
                         delay={100}
                         duration={0.9}
                         ease="power3.out"
@@ -35,11 +35,10 @@ export default function Home() {
                         to={{ opacity: 1, y: 0 }}
                         threshold={0.1}
                         rootMargin="-100px"
-                        textAlign="left"
                     />
                     <SplitText
                         text="Let's create awesome websites together!"
-                        className="text-slate-100 text2xl"
+                        className="text-center md:text-left text-slate-100"
                         delay={50}
                         duration={0.1}
                         ease="power3.out"
@@ -48,17 +47,16 @@ export default function Home() {
                         to={{ opacity: 1, y: 0 }}
                         threshold={0.1}
                         rootMargin="-100px"
-                        textAlign="left"
                     />
-                    <div className="flex gap-6 text-xl font-semibold">
+                    <div className="flex gap-4 text-md font-semibold m-auto md:m-0">
                         <FadeContent 
                             blur={true} 
                             duration={1000} 
                             easing="ease-out" 
                             initialOpacity={0}
                         >
-                            <Link href="/portfolio" className="block border border-indigo-500 hover:bg-gray-500/20 p-2 rounded-xl cursor-target text-indigo-300 flex items-center gap-2">
-                                <div>View My Work</div>
+                            <Link href="/portfolio" className="bg-gray-900 w-32 block border border-indigo-500 hover:bg-gray-500/20 p-2 cursor-target text-indigo-300 flex items-center gap-2">
+                                <div>View Works</div>
                                 <FaScrewdriverWrench className="text-gray-300"/>
                             </Link>
                         </FadeContent>
@@ -68,7 +66,7 @@ export default function Home() {
                             easing="ease-out" 
                             initialOpacity={0}
                         >
-                            <Link href="/contact" className="block border border-indigo-500 hover:bg-gray-500/20 p-2 rounded-xl cursor-target text-indigo-300 flex items-center gap-2">
+                            <Link href="/contact" className="bg-gray-900 w-32 block border border-indigo-500 hover:bg-gray-500/20 p-2 cursor-target text-indigo-300 flex items-center gap-2">
                                 <div>Contact Me</div>
                                 <FaPhone className="text-gray-300" />
                             </Link>
@@ -76,7 +74,7 @@ export default function Home() {
                     </div>              
                 </div>
  
-                <Lottie animationData={Developer} loop={true} className="w-[600px]"/>
+                <Lottie animationData={Developer} loop={true} className="w-[200px] md:w-[600px]"/>
 
             </div>
         </section>

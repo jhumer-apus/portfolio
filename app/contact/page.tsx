@@ -9,11 +9,11 @@ import { FaPhone } from "react-icons/fa";
 export default function Contact() {
 
     return (
-        <section id="contact" className="min-h-screen">
+        <section id="contact" className="min-h-screen p-6">
             <br/>
 
             <div id="title-wrapper">
-                <div className="text-center m-auto text-6xl text-purple-300 font-semibold w-fit mt-25 flex items-center gap-4">
+                <div className="text-center m-auto text-3xl md:text-6xl text-purple-300 font-semibold w-fit mt-25 flex items-center gap-4">
                     <BlurText
                         text="Get In Touch"
                         delay={200}
@@ -35,11 +35,11 @@ export default function Contact() {
                     delay={100}
                     animateBy="words"
                     direction="top"
-                    className="text-center w-fit m-auto text-xl text-slate-200 font-semi-bold mt-4"
+                    className="justify-center w-fit m-auto text-lg md:text-xl text-slate-200 font-semi-bold mt-4"
                 />
             </div>
 
-            <div className="flex m-auto py-20 text-slate-200 w-fit">
+            <div className="flex flex-col-reverse md:flex-row m-auto py-20 text-slate-200 w-fit">
                 <FadeContent 
                     blur={true} 
                     duration={1000} 
