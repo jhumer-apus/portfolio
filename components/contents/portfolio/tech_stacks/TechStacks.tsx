@@ -13,7 +13,7 @@ export default function TechStacks() {
                         key={index}
                         distance={200}
                         direction="vertical"
-                        reverse={index % 2 == 0? true: false}
+                        reverse={true}
                         duration={Math.random() + 1.2}
                         ease="bounce.out"
                         initialOpacity={0.2}
