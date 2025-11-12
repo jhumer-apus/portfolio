@@ -41,7 +41,7 @@ export default function ContactForm() {
     };
 
     return(
-        <div className="min-w-[360px] md:w-[500px] border-2 border-purple-200/30 bg-purple-900/40 rounded-xl p-8">
+        <div className="min-w-[300px] md:w-[500px] border-2 border-purple-200/30 bg-purple-900/40 rounded-xl p-8">
             <Formik 
                 initialValues={initialValues} 
                 onSubmit={onSubmit}

@@ -4,10 +4,20 @@ import { items } from "@/data/routes";
 import { cn } from "@/lib/utils";
 import { useMenuStore } from "@/store/useMenuStore";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { FaChevronCircleLeft } from "react-icons/fa";
 
 export default function SideBar() {
     const { openSideBar, setOpenSideBar } = useMenuStore();
+    const pathname = usePathname()   
+
+    const currRouteIndex = items.findIndex(item => {
+        if (item.href === "/") {
+            return pathname === "/";
+        }
+        return pathname.startsWith(item.href + "/") || pathname === item.href;
+    });
+    console.log(currRouteIndex)
 
     return (
         <div className={cn("block md:hidden bg-gray-900/60 min-h-screen w-screen fixed top-0 z-20 transform transition-all", openSideBar ? "translate-x-0" : "-translate-x-full")}>
@@ -20,7 +30,7 @@ export default function SideBar() {
                 </div>
                 <ul className="p-2">
                     {items.map((route,index) => (
-                        <li key={index} className="rounded-xl hover:bg-gray-900">
+                        <li key={index} className={cn("rounded-xl hover:bg-gray-900/50", currRouteIndex == index? "bg-gray-800": "bg-none")}>
                             <Link 
                                 href={route.href}
                                 className="block py-4 px-6 rounded-xl text-lg font-semibold text-slate-200"
