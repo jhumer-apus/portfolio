@@ -10,6 +10,7 @@ import Header from "@/components/Header";
 import ToastProvider from "@/components/ToastProvider";
 import HeaderMobile from "@/components/HeaderMobile";
 import SideBar from "@/components/SideBar";
+import GoogleAnalytics from "@/components/google/GoogleAnalytics";
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
@@ -31,6 +32,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
         <SideBar />
         {children}
+        <GoogleAnalytics />
       </body>
     </html>
   );
