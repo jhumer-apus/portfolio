@@ -97,32 +97,32 @@ export const projects: ProjectProps[] = [
                 "Contact page where users can reach out for inquiries or product orders",
             ]
         },
-        {
-            id: 5,
-            title: "Ask For A Date",
-            description: "“Ask For a Date” was created just for fun and as a personal hobby. I made it when I had someone I liked — instead of asking her directly, I wanted to do it in a unique and creative way.",
-            imgSrc: "/assets/projects/ask-date/ask_date_1.png",
-            thumbnails: [
-                "/assets/projects/ask-date/ask_date_1.png", 
-                "/assets/projects/ask-date/ask_date_2.png", 
-                "/assets/projects/ask-date/ask_date_3.png", 
-                "/assets/projects/ask-date/ask_date_4.png", 
-                "/assets/projects/ask-date/ask_date_5.png", 
-                "/assets/projects/ask-date/ask_date_6.png", 
-                "/assets/projects/ask-date/ask_date_7.png", 
-                "/assets/projects/ask-date/ask_date_8.png", 
-                "/assets/projects/ask-date/ask_date_9.png"
-            ],
-            tags: ["nextjs", "mui", "javascript", "html", "css"],
-            repositoryLink: "https://github.com/jhumer-apus/ask-date-client.git",
-            websiteLink: "https://ask-her-a-date.vercel.app/",
-            videoSrc: "https://www.youtube.com/embed/3N8XY9XW0TY?si=hLgKRwrXECTmTi4D",
-            keyFeatures: [
-                "Comedy content designed to make her smile",
-                "A playful 'silly button' feature for fun interaction",
-                "Email integration for sending summaries",
-            ]
-        },
+        // {
+        //     id: 5,
+        //     title: "Ask For A Date",
+        //     description: "“Ask For a Date” was created just for fun and as a personal hobby. I made it when I had someone I liked — instead of asking her directly, I wanted to do it in a unique and creative way.",
+        //     imgSrc: "/assets/projects/ask-date/ask_date_1.png",
+        //     thumbnails: [
+        //         "/assets/projects/ask-date/ask_date_1.png", 
+        //         "/assets/projects/ask-date/ask_date_2.png", 
+        //         "/assets/projects/ask-date/ask_date_3.png", 
+        //         "/assets/projects/ask-date/ask_date_4.png", 
+        //         "/assets/projects/ask-date/ask_date_5.png", 
+        //         "/assets/projects/ask-date/ask_date_6.png", 
+        //         "/assets/projects/ask-date/ask_date_7.png", 
+        //         "/assets/projects/ask-date/ask_date_8.png", 
+        //         "/assets/projects/ask-date/ask_date_9.png"
+        //     ],
+        //     tags: ["nextjs", "mui", "javascript", "html", "css"],
+        //     repositoryLink: "https://github.com/jhumer-apus/ask-date-client.git",
+        //     websiteLink: "https://ask-her-a-date.vercel.app/",
+        //     videoSrc: "https://www.youtube.com/embed/3N8XY9XW0TY?si=hLgKRwrXECTmTi4D",
+        //     keyFeatures: [
+        //         "Comedy content designed to make her smile",
+        //         "A playful 'silly button' feature for fun interaction",
+        //         "Email integration for sending summaries",
+        //     ]
+        // },
         {
             id: 6,
             title: "Hospital Management System",
